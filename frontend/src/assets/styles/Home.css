@@ -1,0 +1,475 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: white;
+    box-shadow: var(--shadow-light, 0 2px 10px rgba(0, 0, 0, 0.08));
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================
+   LOGO
+   DO NOT CHANGE
+========================= */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.logo {
+    width: 220px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.logo-title {
+    color: var(--primary-color, #1769aa);
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary, #666);
+    margin: 3px 0 0;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.home-main {
+    min-height: calc(100vh - 140px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 45px 0 25px;
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+    font-size: 38px;
+    color: var(--text-primary, #222);
+}
+
+.hero-description {
+    width: 65%;
+    max-width: 750px;
+    margin: auto;
+    font-size: 16px;
+    color: var(--text-secondary, #666);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   INPUT SECTION
+========================= */
+
+.input-section {
+    padding: 10px 0 35px;
+}
+
+.input-card {
+    background: white;
+    border-radius: var(--border-radius, 12px);
+    box-shadow: var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.10));
+    padding: 30px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.input-card h2 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    color: var(--text-primary, #222);
+}
+
+.input-description {
+    color: var(--text-secondary, #666);
+    margin: 0 0 20px;
+    font-size: 15px;
+}
+
+.input-card textarea {
+    display: block;
+    width: 100%;
+    min-height: 220px;
+    resize: vertical;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    border: 1px solid var(--border-color, #d6d6d6);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+    color: #222;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.input-card input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--border-color, #d6d6d6);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+    color: #222;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.input-card textarea:focus,
+.input-card input:focus {
+    border-color: var(--primary-color, #1769aa);
+
+    box-shadow:
+        0 0 0 3px rgba(23, 105, 170, 0.10);
+}
+
+
+/* =========================
+   OR DIVIDER
+========================= */
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 5px 0 22px;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border-color, #dddddd);
+}
+
+.or-divider span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary, #777);
+}
+
+
+/* =========================
+   VERIFY BUTTON
+========================= */
+
+.primary-btn {
+    border: none;
+    cursor: pointer;
+
+    background: var(--primary-color, #1769aa);
+    color: white;
+
+    border-radius: 8px;
+
+    padding: 12px 20px;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+
+    background: var(--primary-dark, #125586);
+
+    box-shadow:
+        var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.10));
+}
+
+.analyze-btn {
+    display: block;
+    margin: 5px auto 0;
+
+    width: 220px;
+
+    font-size: 17px;
+}
+
+.analyze-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+    margin-top: 18px;
+
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    background: #fff1f1;
+    border: 1px solid #ffcaca;
+
+    color: #c62828;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESULT SECTION
+========================= */
+
+.result-section {
+    padding: 0 0 40px;
+}
+
+.result-card {
+    max-width: 850px;
+    margin: auto;
+
+    background: white;
+
+    border-radius: var(--border-radius, 12px);
+
+    box-shadow:
+        var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.10));
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.result-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.result-status {
+    font-size: 28px;
+    font-weight: 700;
+
+    color: var(--primary-color, #1769aa);
+
+    margin-bottom: 10px;
+}
+
+.confidence {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-primary, #222);
+
+    margin-bottom: 18px;
+}
+
+.result-note {
+    max-width: 650px;
+    margin: auto;
+
+    color: var(--text-secondary, #666);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: white;
+
+    margin-top: 20px;
+
+    padding: 20px 0;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border-color, #dddddd);
+}
+
+.footer h2 {
+    margin: 0 0 10px;
+}
+
+.footer h3 {
+    margin: 8px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+
+    color: var(--text-secondary, #666);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+input:hover,
+textarea:hover {
+    border-color: var(--primary-color, #1769aa);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero-description {
+        width: 80%;
+    }
+
+    .input-card,
+    .result-card {
+        max-width: 90%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /*
+       Logo dimensions intentionally kept unchanged.
+    */
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .hero {
+        padding: 35px 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .input-card,
+    .result-card {
+        padding: 22px;
+        max-width: 90%;
+    }
+
+    .input-card textarea {
+        min-height: 190px;
+    }
+
+    .analyze-btn {
+        width: 100%;
+    }
+
+    .result-status {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        gap: 18px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .input-card,
+    .result-card {
+        padding: 18px;
+    }
+
+    .input-card h2,
+    .result-card h2 {
+        font-size: 21px;
+    }
+
+    .input-card textarea {
+        min-height: 170px;
+    }
+
+    .footer {
+        padding: 15px 20px;
+    }
+}
